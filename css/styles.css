@@ -182,6 +182,8 @@ align-items: center;
 .icon-container--accent{
   background: var(--color-accent);  
 }
+
+
 /* Button */
 .btn{
     border-radius: 40px;
@@ -446,6 +448,9 @@ grid-template-columns: 1fr 1fr;
    position: relative; 
    
 }
+button:not(.co){
+
+}
 .testimonial__image > img {
     width: 100%;
 }
@@ -500,4 +505,36 @@ grid-template-columns:1fr auto  ;
         justify-self: start;
         margin: 0 2rem;
     }
+}
+/* Collapsibles */
+
+.collapsible__header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapsible__heading{
+    margin-top: 0;
+    font-size: 3rem;
+}
+
+.collapsible__chevron{
+    transform: rotate(-90deg);
+    transition: transform .3s;
+}
+
+.collapsible__content{
+    max-height:0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.collapsible--expanded .collapsible__chevron{
+    transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__content{
+    max-height: 100vh;
+    opacity: 1;
 }
